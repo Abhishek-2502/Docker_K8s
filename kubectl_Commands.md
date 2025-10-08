@@ -94,6 +94,12 @@ kubectl port-forward pod_name 8000:8000
 ```
 kubectl apply -f manifest_filename
 ```
+
+### Apply all Manifest file in a directory
+```
+kubectl apply -f .
+```
+
 ### Delete a Manifest
 ```
 kubectl delete -f manifest_filename
@@ -184,6 +190,11 @@ kubectl delete service service_name
 ### To access it via browser (on Minikube):
 ```
 minikube service service_name
+```
+
+### Get all Pod, Deployment, Services, Replicasets etc
+```
+kubectl get all
 ```
 
 
