@@ -1,0 +1,8 @@
+main.py uses input(), which requires an interactive terminal. By default, Docker does not allocate a TTY (interactive terminal), so it will not work unless you explicitly run the container in interactive mode.
+
+Solution: Use the -it flag when running the container:
+
+
+
+docker build -t hello-world-python-input .
+docker run -it hello-world-python-input

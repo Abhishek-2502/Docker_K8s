@@ -1,0 +1,2 @@
+docker build -t hello-world-python .
+docker run hello-world-python

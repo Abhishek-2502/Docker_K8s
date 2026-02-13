@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: my_flask_app
+    build: .
+    volumes:
+      - ./app:/app  # Mount only the app folder to avoid dependency conflicts
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://myuser:mypassword@db:5432/mydatabase
+    depends_on:
+      - db
+
+  db:
+    container_name: my_postgres_db
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

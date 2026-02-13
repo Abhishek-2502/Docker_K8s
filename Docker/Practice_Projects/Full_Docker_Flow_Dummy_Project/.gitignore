@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Logs and database files
+*.log
+instance/
+db.sqlite3
+
+# Python package files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Docker files
+*.tar
+*.pid
+*.sock
+docker-compose.override.yml
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Compiled Python files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Flask cache & temp files
+*.swp
+*.swo
+__pycache__/
+flask_session/
+
+# PostgreSQL data
+pgdata/
