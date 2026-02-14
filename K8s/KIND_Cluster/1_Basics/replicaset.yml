@@ -2,7 +2,7 @@ kind: ReplicaSet
 apiVersion: apps/v1
 metadata:
   name: nginx-replicaset
-  namespace: nginx
+  namespace: nginx-ns
 spec:
   replicas: 2 
 

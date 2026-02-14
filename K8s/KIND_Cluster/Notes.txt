@@ -1,5 +1,11 @@
-## Pods
-Pods is a 
+FLOW OF LEARNING--
+1. namespace.yml
+2. pod.yml
+3. deployment.yml
+4. replicaset.yml
+5. daemonsets.yml
+6. Jobs/job.yml
+7. Jobs/Cronjob.yml
 
 ## Deployment/ReplicaSet/DaemonSet/StatefulSet
 

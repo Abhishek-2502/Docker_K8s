@@ -2,7 +2,7 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: nginx-pod
-  namespace: nginx
+  namespace: nginx-ns
 spec:
   containers:
     - name: nginx

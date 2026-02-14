@@ -2,7 +2,7 @@
 **`NAMESPACE` [ `Container ->` `Pod ->` `Deployment ->` `Service ->` `User🙍`]**
 
 
-## NAMESPACE
+## 🌟 NAMESPACE
 ### Show all namespaces
 ```
 kubectl get ns
@@ -13,18 +13,33 @@ kubectl get namespace
 
 ### Create namespace
 ```
-kubectl create ns namespace_name
+kubectl create ns namespace-name
 ```
-**Ex:** kubectl create ns nginx_ns
+**Ex:** kubectl create ns nginx-ns
 
 
 ### Delete a namespace
 ```
-kubectl delete ns namespace_name
+kubectl delete ns namespace-name
+```
+
+### Setting default namespace
+```
+kubectl config set-context --current --namespace=namespace-name
+```
+
+### Verify the current context
+```
+kubectl config current-context
+```
+
+### Check the namespace configured in the current context
+```
+kubectl config view --minify | grep namespace:
 ```
 
 
-## PODS
+## 🌟 PODS
 ### Get Pods
 ```
 kubectl get pods 
@@ -33,12 +48,15 @@ kubectl get pods
 kubectl get pods -A
 ```
 ```
-kubectl get pods -n namespace_name -o wide
+kubectl get pods -n namespace-name -o wide
 ```
 
 ### Show all Pods in a namespace 
 ```
-kubectl get pods -n namespace_name
+kubectl get pods -n namespace-name
+```
+```
+kubectl namespace=namespace-name get pods
 ```
 **Ex:** kubectl get pods -n kube-system
 
@@ -52,9 +70,9 @@ kubectl run pod_name --image=image_name
 
 ### Create pod in a namespace
 ```
-kubectl run pod_name --image=image_name -n namespace_name
+kubectl run pod_name --image=image_name -n namespace-name
 ```
-**Ex:** kubectl run nginx --image=nginx -n nginx_ns
+**Ex:** kubectl run nginx --image=nginx -n nginx-ns
 
 
 ### Delete Pod
@@ -65,7 +83,7 @@ kubectl delete pod pod_name
 
 ### Delete Pod in a namespace
 ```
-kubectl delete pod pod_name -n namespace_name
+kubectl delete pod pod_name -n namespace-name
 ```
 
 
@@ -74,7 +92,7 @@ kubectl delete pod pod_name -n namespace_name
 kubectl logs pod_name
 ```
 ```
-kubectl logs pod/pod_name -n namespace_name
+kubectl logs pod/pod_name -n namespace-name
 ```
 
 ### Get Pods info
@@ -82,7 +100,7 @@ kubectl logs pod/pod_name -n namespace_name
 kubectl describe pods
 ```
 ```
-kubectl describe pod/pod_name -n namespace_name
+kubectl describe pod/pod_name -n namespace-name
 ```
 
 ### Port Forward to Localhost
@@ -107,7 +125,7 @@ kubectl delete -f manifest_filename
 
 ### Execute Commands inside Pod
 ```
-kubectl exec -it pod/pod_name -n namespace_name -- bash
+kubectl exec -it pod/pod_name -n namespace-name -- bash
 ```
 **Ex:** kubectl exec -it pod/nginx-pod -n nginx -- bash
 
@@ -116,16 +134,18 @@ To verify nginx:
 curl 127.0.0.1
 ```
 
-## DEPLOYMENT
+## 🌟 DEPLOYMENT
 
 **Note:** Replace deployments with replicaset for ReplicaSet Commands
+
+**Note:** Replace deployments with deploy. Both are same
 
 ### Get All Deployments
 ```
 kubectl get deployments
 ```
 ```
-kubectl get deployments -n namespace_name
+kubectl get deployments -n namespace-name
 ```
 
 ### Port Forward to Deployment
@@ -143,10 +163,20 @@ kubectl create deployment deployment_name --image=link
 kubectl delete deployment deployment_name
 ```
 
+### To check how deployment creates ReplicaSet & Pods
+```
+kubectl describe deploy deployment_name
+kubectl get rs
+```
+
 ### Expose Deployment as Service
 ```
 kubectl expose deployment deployment_name --type=LoadBalancer --port=80
 ```
+
+### ROLLING UPDATE & ROLLBACK (Supported by Deployment only)
+
+---
 
 ### Update Deployment Image (ROLLING UPDATE)
 ```
@@ -161,13 +191,23 @@ kubectl rollout status deployment deployment_name
 ```
 **Ex:** kubectl rollout status deployment nginx-deployment -n nginx 
 
-### Rollback a Rollout
+### Rollback a Rollout (ROLLOUT)
 ```
 kubectl rollout undo deployment deployment_name 
 ```
-**Ex:** kubectl rollout undo deployment nginx-deployment -n nginx  
+**Ex:** kubectl rollout undo deployment nginx-deployment -n nginx 
 
-### Scale
+### Rollback a Rollout to specific version
+```
+kubectl rollout undo deployment deployment_name --to-revision=revision_number
+```
+
+###  History of your versions or about deploymnets
+```
+kubectl rollout history deployment deployment_name 
+```
+
+### Scale Up/Down
 ```
 kubectl scale deployment deployment_name -replicas=5
 ```
@@ -175,7 +215,7 @@ kubectl scale deployment deployment_name -replicas=5
 
 
 
-## SERVICE
+## 🌟 SERVICE
 
 ### Get All Services
 ```
@@ -198,7 +238,7 @@ kubectl get all
 ```
 
 
-## HORIZONTAL POD AUTOSCALER (HPA)
+## 🌟 HORIZONTAL POD AUTOSCALER (HPA)
 
 ### This tells Kubernetes to:
 - Monitor CPU usage.

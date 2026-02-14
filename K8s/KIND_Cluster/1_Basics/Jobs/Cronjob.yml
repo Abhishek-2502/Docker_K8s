@@ -2,7 +2,7 @@ kind: CronJob
 apiVersion: batch/v1
 metadata:
   name: minite-backup
-  namespace: nginx
+  namespace: nginx-ns
 spec:
   schedule: "*/2 * * * *"
   jobTemplate:
