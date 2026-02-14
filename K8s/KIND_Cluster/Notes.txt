@@ -4,8 +4,14 @@ FLOW OF LEARNING--
 3. deployment.yml
 4. replicaset.yml
 5. daemonsets.yml
-6. Jobs/job.yml
-7. Jobs/Cronjob.yml
+6. Jobs
+    - job.yml
+    - Cronjob.yml (Cron is following a particular schedule. (Cron Guru))
+7. Volume
+    - persistentVolume.yml
+    - persistentVolumeClaim.yml
+    - deployment.yml
+8. service.yml
 
 ## Deployment/ReplicaSet/DaemonSet/StatefulSet
 
@@ -14,4 +20,3 @@ We can do rolling update on Deployment but not on ReplicaSet.
 DaemonSet ensure every node should have atleast 1 running ReplicaSet.
 
 
-Cron is following a particular schedule. (Cron Guru)
