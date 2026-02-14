@@ -1,0 +1,33 @@
+# Docker
+ - Docker Image
+ - Docker Container
+ - Docker Volume
+ - Multi-Stage Build
+ - Docker-Compose
+ - Docker Hub
+ - Docker Scout
+ - Docker DCT
+ - Docker Networking
+ - Docker Swarm
+
+# Kubernetes
+ - Minikube
+ - Kubeadm
+ - KIND Cluster
+ - Kubectl
+ - Namespace
+ - Pods
+ - Deployments
+ - DaemonSets
+ - ReplicaSets
+ - StatefulSets
+ - Rolling Update and Rollback
+ - Labels and Selectors
+ - Services
+ - Jobs and CronJobs
+ - Persistent Volume
+ - Persistent Volume Claim
+ - Ingress
+ - ConfigMaps
+ - Secrets
+ - HPA and VPA
