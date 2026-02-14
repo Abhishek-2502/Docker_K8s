@@ -11,7 +11,7 @@ FLOW OF LEARNING--
     - persistentVolume.yml
     - persistentVolumeClaim.yml
     - deployment.yml
-8. service.yml
+    - service.yml
 
 ## Deployment/ReplicaSet/DaemonSet/StatefulSet
 
