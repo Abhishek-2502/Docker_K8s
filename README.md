@@ -31,3 +31,19 @@
  - ConfigMaps
  - Secrets
  - HPA and VPA
+
+
+# Resources
+
+## K8s
+### Youtube
+ - [M Prashant](https://www.youtube.com/watch?v=rBeyHDKLVqM)
+ - [TWS](https://www.youtube.com/watch?v=W04brGNgxN4)
+
+### Github
+ - https://github.com/LondheShubham153/kubestarter
+ - https://github.com/LondheShubham153/kubernetes-in-one-shot
+
+### Other
+ - https://drive.google.com/drive/folders/1Yvs-iRxr2cFnVcL3eOHwiLiLrlD0HIok
+ - https://docs.google.com/document/d/1kE1eUR5cZ5SBVa3s3_5oVvoDii8Hp7Rd20Xjz6_iiVU/edit?pli=1&tab=t.0#heading=h.rpp25mp3mn9w
