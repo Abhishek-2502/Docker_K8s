@@ -1,7 +1,7 @@
 # Kubectl Commands
 **`NAMESPACE` [ `Container ->` `Pod ->` `Deployment ->` `Service ->` `User🙍`]**
 
-**Note:** Use 'Sudo -E' before any command if any permission issue came.
+**Note:** Use 'sudo -E' before any command if any permission issue came.
 
 ## 🌟 NODE
 
@@ -244,14 +244,14 @@ minikube service service-name
 ```
 kubectl port-forward service/service-name port-number(your machine):port-number(inside pod) --address=0.0.0.0
 ```
-**Ex:** kubectl port-forward service/nginx-service 80:80 --address=0.0.0.0
+**Ex:** kubectl port-forward service/nginx-service 8081:80 --address=0.0.0.0
 
 
 ### Port Forward in namespace
 ```
 kubectl port-forward service/service-name -n namespace-name port-number(your machine):port-number(inside pod) --address=0.0.0.0
 ```
-**Ex:** kubectl port-forward service/nginx-service -n nginx-ns 80:80 --address=0.0.0.0
+**Ex:** kubectl port-forward service/nginx-service -n nginx-ns 8081:80 --address=0.0.0.0
 
 ### Get all Pod, Deployment, Services, Replicasets etc
 ```
