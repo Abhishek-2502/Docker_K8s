@@ -12,8 +12,8 @@ This is a simple project demonstrating how to containerize a **Flask application
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/Abhishek-2502/Full_Docker_Flow_Dummy_Project
-cd Full_Docker_Flow_Dummy_Project
+git clone https://github.com/Abhishek-2502/Docker_K8s
+cd Docker/Practice_Projects/Full_Docker_Flow_Dummy_Project
 ```
 
 ### 2️⃣ Run the Project
@@ -73,10 +73,3 @@ docker-compose logs -f
 ```sh
 docker-compose down -v
 ```
-
-## 📜 License
-This project is open-source and free to use.
-
----
-Feel free to modify and expand this project! 🚀
-
